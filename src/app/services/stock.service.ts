@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 import { HistoricalPrice, StockData } from '../models/stock.models';
-import { environment } from '../../environments/environments';
+import { environment } from '../../environments/environments.prod';
 
 @Injectable({ providedIn: 'root' })
 export class StockService {

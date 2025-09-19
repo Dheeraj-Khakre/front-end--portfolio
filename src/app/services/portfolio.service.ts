@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 import { AssetRequest, AssetResponse, PortfolioRequest, PortfolioResponse } from '../models/portfolio.model';
 import { MessageResponse } from '../models/jwt-response';
-import { environment } from '../../environments/environments';
+import { environment } from '../../environments/environments.prod';
 
 @Injectable({ providedIn: 'root' })
 export class PortfolioService {
