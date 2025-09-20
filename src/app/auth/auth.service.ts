@@ -29,7 +29,7 @@ export class AuthService {
     return this.http.post<JwtResponse>(`${this.api}/signin`, payload).pipe(
       tap(res => {
         if (isPlatformBrowser(this.platformId)) {
-          localStorage.setItem(this.tokenKey, res.accessToken);
+          localStorage.setItem(this.tokenKey, res.token);
         }
         this._loggedIn.next(true);
       })
