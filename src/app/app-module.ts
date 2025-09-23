@@ -27,7 +27,7 @@ import { PortfolioFormDialogComponent } from './my-component/portfolio/portfolio
 import { AiInsightsDialogComponent } from './my-component/ai/ai-insights-dialog.component/ai-insights-dialog.component';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -61,8 +61,10 @@ import { MatChipsModule } from '@angular/material/chips';
     MatInputModule,
     MatButtonModule,
     NgxChartsModule,
-     MatListModule,
-     MatChipsModule,
+    MatListModule,
+    MatChipsModule,
+    MarkdownModule,
+    FormsModule
   
   ],
   providers: [
