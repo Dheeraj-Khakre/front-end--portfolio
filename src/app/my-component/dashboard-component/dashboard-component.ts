@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AssetDetailDialogComponent } from '../stocks/asset-detail-dialog.component/asset-detail-dialog.component';
 import { PortfolioFormDialogComponent } from '../portfolio/portfolio-form-dialog.component/portfolio-form-dialog.component';
 import { AiInsightsDialogComponent } from '../ai/ai-insights-dialog.component/ai-insights-dialog.component';
+import { AiChatComponent } from '../ai/ai-chat-component/ai-chat-component';
 
 @Component({
   selector: 'app-dashboard-component',
@@ -223,5 +224,16 @@ export class DashboardComponent implements OnInit {
       // no special result expected; keep as no-op or refresh portfolios if needed
     });
   }
+
+  
+ openAiChat() {
+  if (!this.selectedPortfolio) return;
+
+  this.dialog.open(AiChatComponent, {
+    width: '70%',          
+    maxHeight: '80vh',    
+    panelClass: 'ai-chat-dialog'
+  });
+}
 
 }
